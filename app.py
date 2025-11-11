@@ -32,7 +32,7 @@ app = Dash(__name__, title="Diamond Data")
 app.layout = html.Div(
     [
         html.H1("Diamond Data", style={"margin": "12px 0"}),
-        html.H3("By Amanda Barrañón", style={"textAlign": "center", "color": "gray"}),
+        html.H3("By Denise Amanda Barranon Balderrama", style={"textAlign": "center", "color": "gray"}),
 
 
 
@@ -214,4 +214,5 @@ def update_plot(col, n):
 if __name__ == "__main__":
 
     app.run(debug=False)
+
 
