@@ -52,7 +52,7 @@ app.layout = html.Div(
                         dcc.Input(
                             id="n_subset",
                             type="number",
-                            value=100,  # un tamaño razonable para que el histo salga bien
+                            value=100,  
                             min=1,
                             max=len(my_data),
                             step=1,
@@ -97,7 +97,7 @@ app.layout = html.Div(
                             style={"width": "100%", "height": "480px", "border": "1px solid #eee"},
                         ),
                     ],
-                    style={"flex": "1 1 auto", "minWidth": "0"},  # evita colapso de ancho
+                    style={"flex": "1 1 auto", "minWidth": "0"},  
                 ),
             ],
             style={"display": "flex", "alignItems": "flex-start"},
@@ -157,7 +157,7 @@ def update_plot(col, n):
     if is_numeric_dtype(s):
         x = pd.to_numeric(s, errors="coerce").dropna()
         if len(x) <= 1:
-            fig.update_layout(title=f"No hay suficientes datos numéricos en '{col}'")
+            fig.update_layout(title=f"There isnt enought data '{col}'")
             return fig
         fig = go.Figure(
             data=[
@@ -214,3 +214,4 @@ def update_plot(col, n):
 if __name__ == "__main__":
 
     app.run(debug=False)
+
